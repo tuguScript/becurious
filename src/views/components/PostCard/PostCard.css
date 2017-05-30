@@ -1,0 +1,75 @@
+.tint {
+    position: relative;
+    width: 50%;
+  cursor: pointer;
+}
+
+.cardImage {
+  width: 200%;
+}
+
+.purple:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  background: rgba(115, 100, 251, 0.9);
+  transition: all .3s linear;
+}
+
+.green:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 184, 212, 0.9);
+  transition: all .3s linear;
+}
+
+.teal:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  background: rgba(0, 137, 123, 0.9);
+  transition: all .3s linear;
+}
+
+.purple:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  background: rgba(115, 100, 251, 0.9);
+  transition: all .3s linear;
+}
+
+.hero-text {
+  /*text-align: center;*/
+  height: 100%;
+  position: absolute;
+  padding-left: 15px;
+  padding-right: 15px;
+  /*transform: translate(-50%, -50%);*/
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column wrap;
+}
+
+.hero-text:hover:before { display: none; }
+
+.tint:hover:before { background: none; }
+
