@@ -10,10 +10,6 @@ import { playerActions } from "../../../core/musicPlayer/action.js";
 import { fetchPodcasts } from "../../../core/fetchPodcasts/action";
 
 class HomePage extends Component {
-  constructor() {
-    super();
-    // this.togglePlayPause = this.togglePlayPause.bind(this);
-  }
   componentDidMount() {
     console.log(this.props);
   }

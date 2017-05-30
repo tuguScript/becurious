@@ -1,11 +1,11 @@
 const express = require('express');
 const logger = require('winston');
-
 //=====================================
 //  INITIALIZE
 //-------------------------------------
 const ENV_PRODUCTION = process.env.NODE_ENV === 'production';
 const app = express();
+app.use(express.static('build'))
 
 require('./config/app')(app);
 require('./config/routes')(app, ENV_PRODUCTION);
