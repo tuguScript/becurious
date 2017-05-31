@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'http://05f.642.myftpupload.com/';
+export const API_BASE_URL = 'https://wordpress-api-tuguldur01.c9users.io/';
