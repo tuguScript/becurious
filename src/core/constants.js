@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'http://www.sosnoopy.com/';
+export const API_BASE_URL = 'http://05f.642.myftpupload.com/';
