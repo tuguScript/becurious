@@ -20,9 +20,7 @@
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0",
     "webpack-dev-server": "2.4.5",
-    "winston": "^2.3.1"
-  },
-  "devDependencies": {
+    "winston": "^2.3.1",
     "autoprefixer": "7.1.0",
     "babel-core": "6.24.1",
     "babel-eslint": "7.2.3",
@@ -61,6 +59,8 @@
     "url-loader": "0.5.8",
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.3"
+  },
+  "devDependencies": {
   },
   "scripts": {
     "start": "node scripts/start.js",
