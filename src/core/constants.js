@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'https://wordpress-api-tuguldur01.c9users.io/';
+export const API_BASE_URL = 'https://www.soniuch.com/';
