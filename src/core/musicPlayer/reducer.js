@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   isPlaying: false,
   volume: 1,
   canPlay: false,
-  src: 'http://www.sosnoopy.com/wp-content/uploads/2017/05/03.-Finale.mp3',
+  src: '',
   name: null
 };
 

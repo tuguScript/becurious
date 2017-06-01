@@ -11,7 +11,8 @@ import { fetchPodcasts } from "../../../core/fetchPodcasts/action";
 
 class HomePage extends Component {
   componentDidMount() {
-    console.log(this.props);
+    this.props.fetchPosts();
+    this.props.fetchPodcasts()
   }
   playSelectedTrack(source_url, name) {
     this.props.playSelectedTrack(source_url, name);
@@ -29,9 +30,13 @@ class HomePage extends Component {
       return <PostCard key={i} post={post} />;
     });
 
+    if(this.props.postList.error) {
+      return <h1>error</h1>
+    }
+
     let podcastItem = this.props.podcastsList.data.map((item, i) => {
       return (
-        <div className="podcastItem" style={{ marginBottom: "5px" }}>
+        <div className="podcastItem" style={{ marginBottom: "5px" }} key={i}>
           <div className="podcastLeft">
             <img
               src="http://www.lorempixel.com/100/100"
@@ -61,7 +66,7 @@ class HomePage extends Component {
     });
 
     if (this.props.postList.loading) {
-      return <div style={{ marginTop: 200 }}><Spinner /></div>;
+      return <Spinner size={'100px'} color={'#7364FB'}/>;
     }
     return (
       <div>
@@ -112,10 +117,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchPosts: dispatch(fetchPosts()),
+    fetchPosts: () => dispatch(fetchPosts()),
     audioPlaying: () => dispatch(playerActions.audioPlaying()),
     audioPaused: () => dispatch(playerActions.audioPaused()),
-    fetchPodcasts: dispatch(fetchPodcasts()),
+    fetchPodcasts: () => dispatch(fetchPodcasts()),
     playSelectedTrack: (source_url, name) =>
       dispatch(playerActions.playSelectedTrack(source_url, name))
   };
