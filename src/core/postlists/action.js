@@ -1,14 +1,15 @@
 import axios from 'axios';
 import { API_BASE_URL } from '../constants';
+// https://soniuch.com/feed/json
 export const fetchPosts = () => {
   return axios({
     method: "GET",
-    url: `${API_BASE_URL}/feed/json`
+    url: `${API_BASE_URL}/wp-json/wp/v2/posts?_embed`
   })
     .then(res => {
       return {
         type: "FETCH_POSTS_FULFILLED",
-        payload: res.data.items
+        payload: res.data
       };
     })
     .catch(res => {

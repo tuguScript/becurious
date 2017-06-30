@@ -57,7 +57,7 @@ export default class PostCard extends Component {
         <CardTitle
           avatar={
             <Avatar
-              src={this.props.post._embedded.author[0].avatar_urls[48]}
+              src={this.props.post._embedded.author[0].avatar_urls[48] || null}
               role="presentation"
             />
           }
