@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'http://soniuch.x10host.com/';
+export const API_BASE_URL = 'https://tugi.000webhostapp.com/';
